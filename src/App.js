@@ -1,4 +1,6 @@
 import "./styles.scss";
+import { useState } from "react";
+import { render } from "sass";
 
 const NavBar = ({ content }) => {
   console.log(content);
@@ -11,10 +13,12 @@ const NavBar = ({ content }) => {
 };
 
 const HeadBox = ({ content }) => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="HeadBox">
       <div className="hbox-1">
-        <a href="#">
+        <a href="#" onClick={() => setVisible(!visible)}>
           <img
             alt="placeholder"
             src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Feedbin-Icon-menu.svg"
@@ -23,7 +27,11 @@ const HeadBox = ({ content }) => {
       </div>
       <div className="hbox-2">
         <h1> {content.name} </h1>
-        <NavBar content={content.NavBar} />
+        {visible && (
+          <div>
+            <NavBar content={content.NavBar} />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -43,5 +51,6 @@ export default function App() {
 
 const CONTENT = {
   NavBar: ["uno", "dos", "tres"],
+  NavBarLinks: ["#uno", "#dos", "#tres"],
   name: "elon Musk"
 };
