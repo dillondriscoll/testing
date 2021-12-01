@@ -1,18 +1,30 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+  
+  
+  
+  .NavBar {
+    visibility: "hidden";
+    
+  }
+  
+  
   .HeadBox{
     display:flex;
+    text-align:center;
     justify-content: space-between;
+    flex-wrap:wrap;
     .hbox-1{
-      flex-basis: 5%;
       order:1;
-      background-color:turquoise;
+      flex-basis: 5%;
+      background-color:turquoise; 
+      
     }
+    
     .hbox-2{
       background-color:yellow;
       flex-basis: 95%;
       order:2;
+      
+    
       
 
     }
@@ -41,4 +53,4 @@
     justify-content:space-around;
     
   }
-}
+
