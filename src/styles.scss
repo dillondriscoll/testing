@@ -23,68 +23,43 @@
   li{
   display:inline;
   padding:10px 10px 10px 10px;
-  
-  
-  
-  
   }} 
-  
-  
-  
+   
   .HeadBox{
-    margin-top:10px;
+    
     display:flex;
     text-align:center;
     justify-content: space-between;
     flex-wrap:wrap;
-    .hbox-1{
-      order:1;
-      flex-basis: 5%;
-      background-color:turquoise; 
-      position:fixed;
-      
-    }
-    
-    .hbox-2{
-      background-color:yellow;
-      flex-basis: 95%;
-      order:2;
-      
-    
-      
+    overflow:hidden;
 
+    .hbox-2{
+      background-color:teal;
+      flex-basis: 100%;
+      order:1;
+      color:teal;
+      h1{
+
+        background-color:yellow;
+      }
     }
   }
-  .sliderbar {
-    display:flex;
-    justify-content:space-between;
-    
-    .sbox-1{
-      background-color:Green;
-    }
-    .sbox-2{
-      background-color:yellow;
-    }
-    .sbox-3{
-      background-color:turquoise;
-    }
-    .sbox-4{
-      background-color:gray;
-    }
-  }
+  
 
   .mainContent{
-    background-color:gray;
     text-align:center;
-    display:inline;
+    display:flex;
+    flex-direction: COLUMN;
+    
     div {
-      margin-bottom:5em;
-      margin-top:5em;
+      background-color:yellow;
+      MARGIN:100PX;
     }
     img{
-      text-align:center;
       max-height:50%;
       max-width:50%;
+      float:left;
+      margin:10px;
     }
     
   }
