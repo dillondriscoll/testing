@@ -1,16 +1,23 @@
   
   
+ .NavBar { 
+   position:fixed;
+   display:inline-flex;
+   justify-content:space-between;
+   padding:10px 10px 10px 10px;
+   background-color:teal;
+  li{
+  display:inline;
+  padding:10px 10px 10px 10px;
+
+
   
-  .NavBar {
-    visibility: "hidden";
-    
-  }
- #uno {
-   margin-top:100px;
-   margin-bottom:1000px;
- }
+  }} 
+  
+  
   
   .HeadBox{
+    margin-top:10px;
     display:flex;
     text-align:center;
     justify-content: space-between;
@@ -19,6 +26,7 @@
       order:1;
       flex-basis: 5%;
       background-color:turquoise; 
+      position:fixed;
       
     }
     
@@ -50,10 +58,19 @@
     }
   }
 
-  .main_content{
+  .mainContent{
     background-color:gray;
-    display:flex;
-    justify-content:space-around;
+    text-align:center;
+    display:inline;
+    div {
+      margin-bottom:5em;
+      margin-top:5em;
+    }
+    img{
+      text-align:center;
+      max-height:50%;
+      max-width:50%;
+    }
     
   }
 
