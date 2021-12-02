@@ -1,12 +1,15 @@
 import "./styles.scss";
 import { useState } from "react";
-import { render } from "sass";
 
-const NavBar = ({ content }) => {
-  console.log(content);
-  let list = [];
-  content.forEach((item) => {
-    list.push(<li>{item}</li>);
+const NavBar = (props) => {
+  const list = [];
+  props.names.forEach((item, index) => {
+    let linksItem = props.links[index];
+    list.push(
+      <a href={linksItem}>
+        <li key={item}>{item}</li>
+      </a>
+    );
   });
 
   return <div className="NavBar">{list}</div>;
@@ -18,18 +21,18 @@ const HeadBox = ({ content }) => {
   return (
     <div className="HeadBox">
       <div className="hbox-1">
-        <a href="#" onClick={() => setVisible(!visible)}>
+        <button onClick={() => setVisible(!visible)}>
           <img
             alt="placeholder"
             src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Feedbin-Icon-menu.svg"
           />
-        </a>
+        </button>
       </div>
       <div className="hbox-2">
         <h1> {content.name} </h1>
         {visible && (
           <div>
-            <NavBar content={content.NavBar} />
+            <NavBar names={content.NavBar} links={content.NavBarLinks} />
           </div>
         )}
       </div>
