@@ -29,7 +29,7 @@ const NavBar = (props) => {
   props.names.forEach((item, index) => {
     let linksItem = props.links[index];
     list.push(
-      <a href={"#" + linksItem}>
+      <a className="textDeco" href={"#" + linksItem}>
         <li key={item}>{item}</li>
       </a>
     );
@@ -84,14 +84,23 @@ export default function App() {
 
 const CONTENT = {
   contentImages: ["images/musk1.jpg", "images/tesla.jpg"],
-  contentText: ["tesla is a car", "lorem Ipsum", "lots of money"],
+  contentText: [
+    "“When something is important enough, you do it even if the odds are not in your favor.”",
+    "When he’s just twelve years old, he’s already a better programmer than his teachers. At 24 he gives up his studies at Stanford University to start his first business.",
+    "Four years later, that business is worth 300 million dollars and is bought by Compaq. In 2002 eBay buys one of his other businesses – PayPal – for the considerable sum of 1.5 billion dollars. He invests his considerable fortune in SpaceX (2002), Tesla Motors (2004), and SolarCity (2006)."
+  ],
   NavBar: ["elon", "musk", "tesla"],
   NavBarLinks: ["uno", "dos", "tres"],
-  name: "elon Musk"
+  name: "Elon Musk"
 };
 
 const CONTENT2 = {
-  contentText: ["apple technology", "lorem Ipsum", "lots of money"],
+  contentImages: ["images/steve1.jpeg", "images/steve2.jpg"],
+  contentText: [
+    "Steve Jobs likened himself and his employees to artists; he deployed his mercurial personality in the ruthless way that artists sometimes do. He cared about his products the way that artists care about their art.",
+    "lorem Ipsum",
+    "lots of money"
+  ],
   NavBar: ["steve", "jobs", "apple"],
   NavBarLinks: ["testing", "one", "two"],
   name: "Steve Jobs"

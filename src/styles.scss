@@ -3,14 +3,29 @@
  .NavBar { 
    position:fixed;
    display:inline-flex;
-   justify-content:space-between;
+   justify-content:space-around;
    padding:10px 10px 10px 10px;
-   background-color:teal;
+ 
+   .textDeco{
+     background-color:greenyellow;
+  text-decoration:none;
+  text-align:center;
+  color: black;
+    :hover{
+      background-color:green;
+    }
+   }
+   ul {
+     overflow:hidden;
+     list-style-type: none;
+     background-color:black;
+   }
   li{
   display:inline;
   padding:10px 10px 10px 10px;
-
-
+  
+  
+  
   
   }} 
   
